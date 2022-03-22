@@ -18,7 +18,7 @@
     </section> 
 
     <!-- primary container-->
-    <section id="content" class="container">
+    <section id="content-left-side" class="container">
         <div class="row">   
             <!-- search form // left side -->
             <div id="left" class="col-md-3"></div>
@@ -29,6 +29,16 @@
                     <button id="search-button" class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
                 </div>
             </form>
+
+            <div id="search-error"></div>
+            <div id="search-history" class="list-group mt-4"></div>
+            <a id="clear-history" href="#"></a>
+
+            <!-- weather container // right side -->
+            <div id="content-right-side" class="col-md-9 pt-4">
+                <div id="current-forecast" class="border rounded"></div>
+                <div id="five-day-forecast" class="mt-5"></div>
+            </div>
         </div>
     </section>
 
