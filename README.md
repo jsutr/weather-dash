@@ -12,7 +12,7 @@ DISCUSS OTHER FEATURES LATER
 * HTML
 * CSS
 * Javascript
-* Openweather API - Info about the actors or actresses
+* Openweather API - Free Forecast Data API
 <br></br>
 
 ## Website
