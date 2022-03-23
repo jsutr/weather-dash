@@ -126,3 +126,37 @@ var history = (newCity) => {
     }
 }
 
+var renderCities = () => {
+    $('#search-history').empty();
+    if (localStorage.length === 0) {
+        if (priorCity) {
+            $('#search').attr("value", priorCity);
+        } else {
+           let lastCityKey = "cities" + (localStorage.length - 1);
+           lastCity = localStorage.getItem(lastCityKey);
+
+           for (let i = 0; i < localStorage.length; i) {
+               let city = localStorage.getItem("cities" + i);
+               let cityEl;
+
+               if (searchedCity = "") {
+                   searchedCity = lastCity;
+               }
+               if (city === searchedCity) {
+                   cityEl = `<button type="button" class="list-group-item list-group-item-action active">${city}</button></li>`;
+               } else {
+                   cityEl = `<button type="button" class="list-group-item list-group-item-action">${city}</button></li>`;
+               }
+               $("#search-history").prepend(cityEl);
+           }
+
+           if (localStorage.length > 0) {
+               $('#clear-history').html($('<a id="clear-history" href="#">clear</a>'));
+           } else {
+               $('#clear-history').html('');
+           }
+            
+        }
+    }
+}
+
