@@ -111,3 +111,18 @@ var getForecast = (event) => {
     })
 }
 
+// storing cities
+var history = (newCity) => {
+    let usedCity = false;
+    for (let i = 0; i < localStorage.length; i++) {
+        if (localStorage["cities" + i] === newCity) {
+            usedCity = true;
+            break;
+        }
+    }
+
+    if(usedCity === false) {
+        localStorage.setItem('cities' + localStorage.length, usedCity);
+    }
+}
+
